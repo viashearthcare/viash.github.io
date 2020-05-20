@@ -1,0 +1,807 @@
+:root {
+    --themeColor: #28a745;
+    --contentColor: #757575;
+    --textColor: #4a4a4a;
+    --borderColor: #dddddd;
+    --footerBackground: #333132;
+    --footerTextColor: #dddddd;
+}
+
+body {
+    font-family: 'Quicksand' !important;
+    /* font-family: 'Roboto', sans-serif !important; */
+}
+
+.btn {
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.btn-icon {
+    background-color: var(--themeColor);
+    color: var(--white);
+    font-size: 10px;
+    transition: all ease .4s;
+}
+
+.btn-icon:hover {
+    background-color: var(--white);
+    color: var(--themeColor);
+    transition: all ease .4s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.customNavBar {
+    background-color: var(--themeColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.customNavBar .navbar-brand img {
+    height: 50px;
+    width: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.customNavBar .navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 15px;
+    transition: all ease .4s;
+}
+
+.customNavBar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--white);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+    transition: all ease .4s;
+}
+
+.customNavBar .navbar-nav .nav-item .nav-link:hover::before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 4px;
+    right: 4px;
+    border-bottom: 1px solid var(--white);
+    transition: all ease .4s;
+}
+
+.frame {
+    padding: 20px 0;
+}
+
+.section {
+    position: relative;
+    padding: 120px 20px;
+}
+
+.section:nth-child(odd) {
+    background-color: #f5f6fa;
+}
+
+.section:nth-child(even) {
+    background-color: var(--white);
+}
+
+.sectionHeader {
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+    color: var(--textColor);
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.sectionHeader h4 {
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.sectionHeader p {
+    color: var(--contentColor);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.customBorderBox {
+    position: relative;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.customBorderBox .customBorder {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 60px;
+    border-radius: 6px;
+    background-color: var(--borderColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.customBorderBox .customBorder.borderLeft {
+    left: calc( 50% - 40px);
+    transform: translate(-100%, -50%);
+}
+
+.customBorderBox .customBorder.borderRight {
+    right: calc( 50% - 40px);
+    transform: translate(100%, -50%);
+}
+
+.customBorderBox .customBorder.borderLeft::after, .customBorderBox .customBorder.borderRight::before {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: var(--themeColor);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .12);
+    border-radius: 2px;
+}
+
+.customBorderBox .customBorder.borderLeft::after {
+    left: calc(100% + 20px);
+}
+
+.customBorderBox .customBorder.borderRight::before {
+    right: calc(100% + 20px);
+}
+
+/* Welcome Setion Start */
+
+
+#home .info {
+    padding-right: 30px;
+}
+
+#home .infoInner {
+    background-color: #f5f6fa;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .3) inset;
+    border-radius: 20px 40px 20px 40px;
+}
+
+#home .infoInner .carouselImg {
+    height: 515px;
+    padding: 12px;
+}
+
+#home .infoInner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 40px 20px 40px;
+    object-position: center;
+    opacity: 0.9;
+}
+
+#home .infoInner .carousel-caption {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 6px;
+    right: 5%;
+    left: 5%;
+}
+
+#home .infoInner .carousel-caption h3 {
+    color: var(--textColor);
+}
+
+#home .infoInner .carousel-caption p {
+    color: var(--textColor);
+}
+
+#home .infoInner .carousel-indicators{
+    bottom: 20px;
+}
+#home .infoInner .carousel-indicators li{
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+    border: 2px solid var(--themeColor);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+#home .infoInner .carousel-indicators .active{
+ background-color: var(--themeColor);
+}
+
+#home .customCard {
+    position: relative;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 15px 30px 15px 30px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .1);
+    transition: all .4s ease;
+}
+
+#home .customCard:hover {
+    background-color: var(--themeColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .16);
+    transition: all .4s ease;
+}
+
+#home .customCard .icon {
+    color: var(--textColor);
+    color: var(--themeColor);
+    font-size: 30px;
+    margin: 0 0 20px;
+    transition: all .4s ease;
+}
+
+#home .customCard h4 {
+    position: relative;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    padding: 0;
+    transition: all .4s ease;
+}
+
+#home .customCard h4::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    border-top: 1px solid var(--borderColor);
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .4s ease;
+}
+
+#home .customCard:hover h4::after {
+    border-color: #ffffff;
+    transition: all .4s ease;
+}
+
+#home .customCard p {
+    position: relative;
+    color: var(--contentColor);
+    font-size: 12px;
+    font-weight: 500;
+    width: 90%;
+    margin: 0 auto 2px;
+    padding: 0;
+    transition: all .4s ease;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#home .customCard ul {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home .customCard ul li{
+    color: var(--contentColor);
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#home .customCard:hover p, #home .customCard:hover h4, #home .customCard:hover .icon,#home .customCard:hover li {
+    color: #ffffff;
+    transition: all .4s ease;
+}
+
+#home .customCard .btn-icon {
+    background-color: #ffffff;
+    color: var(--themeColor);
+    border: 1px solid var(--themeColor);
+}
+
+#home .customCard:hover .btn-icon, #home .customCard:hover .btn-icon:focus {
+    background-color: #ffffff;
+    color: var(--themeColor);
+    cursor: help;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all .4s ease;
+}
+
+/* Welcome Setion End */
+
+/* Working Setion Start */
+
+#working .workingSteps {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#working .workingSteps li {
+    position: relative;
+    background-color: #f5f6fa;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .04) inset;
+    padding: 10px;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    margin-right: 19px;
+}
+
+#working .workingSteps li::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 155px;
+    height: 155px;
+    border: 6px solid var(--themeColor);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+#working .workingSteps li:nth-child(even)::before {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#working .workingSteps li:nth-child(odd)::before {
+    transform: translateX(-50%) rotate(135deg);
+}
+
+#working .workingSteps li:first-child::after, #working .workingSteps li:last-child::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 30px;
+    background-color: var(--themeColor);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#working .workingSteps li:first-child::after {
+    right: calc(100% + 6px);
+    border-radius: 6px 0px 0px 6px;
+}
+
+#working .workingSteps li:last-child::after {
+    left: calc(100% + 6px);
+    border-radius: 0px 6px 6px 0px;
+}
+
+#working .workingSteps li h6 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .2) inset;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 13px;
+    margin: 0;
+    min-height: 120px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    transition: all .4s ease;
+}
+
+#working .workingSteps li:hover h6 {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .4) inset;
+    transition: all .4s ease;
+}
+
+#working .workingSteps li:nth-child(odd) h6 {
+    bottom: calc(100% + 40px);
+}
+
+#working .workingSteps li:nth-child(even) h6 {
+    top: calc(100% + 40px);
+}
+
+#working .workingSteps li h6::before {
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 2px;
+    border-right: 2px dashed var(--borderColor);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#working .workingSteps li:nth-child(odd) h6::before {
+    top: 100%;
+}
+
+#working .workingSteps li:nth-child(even) h6::before {
+    bottom: 100%;
+}
+
+#working .workingSteps li h6::after {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 24px;
+    background-color: var(--borderColor);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#working .workingSteps li:nth-child(odd) h6::after {
+    top: 100%;
+}
+
+#working .workingSteps li:nth-child(even) h6::after {
+    bottom: 100%;
+}
+
+#working .workingSteps li h6 .count {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .1) inset;
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 auto 6px;
+    letter-spacing: 0.1em;
+    transition: all .4s ease;
+}
+
+#working .workingSteps li:hover h6 .count {
+    background-color: var(--themeColor);
+    color: var(--white);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    transition: all .4s ease;
+}
+
+#working .workingSteps li .icon {
+    position: relative;
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 24px;
+    color: var(--themeColor);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+#working .workingSteps li .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Working Setion End */
+
+/* Clients Setion End */
+
+#clients .customCard {
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .1);
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+#clients .customCard .cardImg {
+    position: relative;
+    height: 250px;
+}
+
+#clients .customCard .cardImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+}
+
+#clients .customCard .cardContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .4s ease;
+    height: 25%;
+}
+
+#clients .customCard:hover .cardContent {
+    height: 100%;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+#clients .customCard .cardContent h6 {
+    color: var(--textColor);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#clients .customCard .cardContent p {
+    color: var(--textColor);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 15px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#clients .customCard:hover .cardContent p {
+    overflow: unset;
+    white-space: unset;
+    text-overflow: unset;
+}
+
+/* Clients Setion End */
+
+/* Why Choose Setion Start */
+
+#whyChoose .customCrad {
+    background-color: #f5f6fa;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .04) inset;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#whyChoose .customCrad .customCradInner {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 20px;
+    transition: all .4s ease;
+}
+
+#whyChoose .customCrad:hover .customCradInner {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all .4s ease;
+}
+
+#whyChoose .customCrad .customCradInner .cardIcon {
+    position: relative;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    color: var(--themeColor);
+    font-size: 26px;
+    margin: 5px auto;
+    transition: all .4s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    border: 2px solid transparent;
+}
+
+#whyChoose .customCrad:hover .customCradInner .cardIcon {
+    transition: all .4s ease;
+    color: var(--themeColor);
+    border-color: var(--themeColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+#whyChoose .customCrad .customCradInner .cardIcon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#whyChoose .customCrad .customCradInner h6 {
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    transition: all .4s ease;
+}
+
+#whyChoose .customCrad:hover .customCradInner h6 {
+    transition: all .4s ease;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, .2);
+}
+
+/* why Choose Setion End */
+
+/* About Setion Start */
+
+#about .customCard {
+    position: relative;
+    border-radius: 10px;
+    padding: 60px 20px 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .1);
+    background-color: #ffffff;
+    text-align: center;
+    transition: all .4s ease;
+}
+
+#about .customCard:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+#about .customCard h4 {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 0 0 6px 6px;
+    color: var(--white);
+    font-size: 16px;
+    background-color: var(--themeColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    margin: 0;
+    min-width: 100px;
+    transition: all .4s ease;
+}
+
+#about .customCard:hover h4 {
+    transition: all .4s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+#about .customCard h4::before, #about .customCard h4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid var(--themeColor);
+}
+
+#about .customCard h4::before {
+    right: 100%;
+    border-left: 8px solid transparent;
+}
+
+#about .customCard h4::after {
+    left: 100%;
+    border-right: 8px solid transparent;
+}
+
+#about .customCard .cardIcon {
+    position: relative;
+    display: block;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    color: var(--contentColor);
+    border: 2px solid transparent;
+    font-size: 26px;
+    margin: 0 auto 20px;
+    transition: all .4s ease;
+}
+
+#about .customCard:hover .cardIcon {
+    color: var(--themeColor);
+    border-color: var(--themeColor);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    transition: all .4s ease;
+}
+
+#about .customCard .cardIcon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#about .customCard p {
+    color: var(--textColor);
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* About Setion End */
+
+/* Contact Setion End */
+
+#contact.section {
+    background-color: #121212;
+}
+
+#contact .sectionHeader h2, #contact .sectionHeader p {
+    color: #ffffff;
+}
+
+#contact h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    margin-bottom: 20px;
+}
+
+#contact h5 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+#contact .links {
+    position: relative;
+    text-align: center;
+}
+
+#contact .links a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: all .4s ease;
+    margin-right: 10px;
+}
+
+#contact .links a:hover {
+    transition: all .4s ease;
+    color: var(--themeColor);
+}
+
+/* Contact Setion End */
+
+/* Footer End */
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--footerBackground);
+    padding: 8px;
+    z-index: 4;
+}
+
+.footer p {
+    color: var(--footerTextColor);
+    font-size: 13px;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Footer End */
