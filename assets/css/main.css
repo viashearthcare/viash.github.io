@@ -109,7 +109,7 @@ body {
 
 .sectionHeader p {
     color: var(--contentColor);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     margin: 0;
 }
@@ -190,7 +190,7 @@ body {
 }
 
 #home .infoInner .carousel-caption {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     border-radius: 6px;
     right: 5%;
     left: 5%;
@@ -202,6 +202,7 @@ body {
 
 #home .infoInner .carousel-caption p {
     color: var(--textColor);
+    padding: 0 10px;
 }
 
 #home .infoInner .carousel-indicators{
@@ -276,7 +277,7 @@ body {
 #home .customCard p {
     position: relative;
     color: var(--contentColor);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     width: 90%;
     margin: 0 auto 2px;
@@ -560,7 +561,7 @@ body {
 #clients .customCard .cardContent p {
     color: var(--textColor);
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     margin: 0;
     padding: 0 15px;
@@ -655,6 +656,7 @@ body {
     background-color: #ffffff;
     text-align: center;
     transition: all .4s ease;
+    margin-bottom: 25px;
 }
 
 #about .customCard:hover {
